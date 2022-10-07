@@ -1,7 +1,7 @@
 $(() => {
     $('#loading').delay(3000).fadeOut(2000);
     $('#preloader').delay(5000).fadeOut(2000);
-
+    $('#loader').delay(5000).fadeOut(2000);
 
     // window.addEventListener('DOMContentLoaded', event => {
 

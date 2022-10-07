@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap');
 
-/* preload */
+/* footer bottom */
 
 .wrapper {
     flex-grow: 1;
-    /*可佔滿垂直剩餘的空間*/
 }
+
+
+/* ---preload animation---*/
 
 #preloader {
     background-color: #000;
@@ -22,12 +24,15 @@
     top: 30%;
 }
 
-#logo-white {
-    animation: coin-flip 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
+
+/* logo flip */
 
 
 /* https://cssloaders.github.io/ */
+
+#logo-white {
+    animation: coin-flip 3s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
 
 @keyframes coin-flip {
     0%,
@@ -62,26 +67,103 @@
     }
 }
 
-.animate__flip {
-    animation-duration: 5s;
+
+/* createArtTalk animation */
+
+#loader {
+    /* font-size: 48px; */
+    color: #f8f9fa;
+    display: inline-block;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: 700;
+    position: relative;
 }
 
-#cat {
+#loader:before {
+    content: '';
+    animation: 4s print linear alternate infinite;
+}
+
+#loader:after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translatey(-45%);
+    width: 2px;
+    height: 1.3em;
+    background: currentColor;
+    opacity: 0.8;
+    animation: 1s blink steps(2) infinite;
+}
+
+@keyframes blink {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+
+@keyframes print {
+    0% {
+        content: 'Cr'
+    }
+    10% {
+        content: 'Cre'
+    }
+    20% {
+        content: 'Crea'
+    }
+    30% {
+        content: 'Creat'
+    }
+    40% {
+        content: 'Create'
+    }
+    50% {
+        content: 'CreateA'
+    }
+    60% {
+        content: 'CreateAr'
+    }
+    70% {
+        content: 'CreateArt'
+    }
+    80% {
+        content: 'CreateArtT'
+    }
+    90% {
+        content: 'CreateArtTa'
+    }
+    100% {
+        content: 'CreateArtTalk'
+    }
+}
+
+
+/* #cat {
     animation-name: cat;
     animation-delay: 0.5s;
     animation-duration: 5s;
     /* opacity: 0; */
-    /* justify-content: ; */
-}
 
-@keyframes cat {
+
+/* justify-content: ; }*/
+
+
+/* @keyframes cat {
     from {
         color: rgba(255, 255, 255, 0.3);
     }
     to {
         color: rgba(255, 255, 255, 0.8);
     }
-}
+} */
+
+
+/* ---preload animatio end--- */
 
 
 /* index */
@@ -178,10 +260,4 @@ i {
 
 .card-text {
     font-size: small;
-}
-
-div.pro-img {
-    height: 50px;
-    width: 100px;
-    background-image: url("assets/img/portfolio/yanben_square(copyright).jpg");
 }
