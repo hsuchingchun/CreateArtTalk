@@ -81,6 +81,9 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    /*使物件垂直排列*/
     margin: 0;
     font-family: var(--bs-body-font-family);
     font-size: var(--bs-body-font-size);
