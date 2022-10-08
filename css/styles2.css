@@ -81,7 +81,7 @@
 
 #loader:before {
     content: '';
-    animation: 4s print linear alternate infinite;
+    animation: 2s print linear alternate infinite;
 }
 
 #loader:after {
